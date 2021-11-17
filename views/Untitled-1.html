@@ -1,0 +1,59 @@
+<%-include("partials/header");-%>
+<body >
+    <span class="material-icons md-48 md-16" onclick="location.replace('home')">home</span>
+    <br><br><br><br><br><br><br>
+    <!-- <h1 class="profile"> Profile </h1> -->
+    <form action="/login" method="POST">
+        <!-- <label class="formText name col-lg-4 col-md-4 col-xs-4 col-sm-4 center-block"> Username: </label> -->
+        <!-- <input class="box name col-lg-4 col-md-4 col-xs-4 col-sm-4 center-block"  type="text" placeholder="Enter Username" name= "Name"><br><br> -->
+
+        <!-- <br><br><br> -->
+        <!-- <button class="button obj name col-lg-2 col-md-2 col-xs-2 col-sm-2 center-block submit" type="submit" onclick="location.replace('home')"> Submit </button> -->
+
+
+        <!-- <form action="/action_page.php"> -->
+            <div class="form-group">
+              <label for="email" class="name col-lg-6 col-md-6 col-xs-6 col-sm-6 center-block">Email:</label>
+              <input type="email" class="box name col-lg-6 col-md-6 col-xs-6 col-sm-6 center-block" id="email" placeholder="Enter email" name="email">
+            </div>
+            <div class="form-group">
+              <label for="pwd" class="name col-lg-6 col-md-6 col-xs-6 col-sm-6 center-block">Password:</label>
+              <input type="password" class="box name col-lg-6 col-md-6 col-xs-6 col-sm-6 center-block" id="pwd" placeholder="Enter password" name="pwd">
+            </div>
+            <br><br>
+            <button type="submit" class="button obj name col-lg-2 col-md-2 col-xs-2 col-sm-2 center-block" name="btn" value="login">Login</button>
+            <button type="submit" class="button obj name col-lg-2 col-md-2 col-xs-2 col-sm-2 center-block" name="btn" value="signup">Signup</button>
+            <button type="submit" class="button obj name col-lg-2 col-md-2 col-xs-2 col-sm-2 center-block" name="btn" value="logout">Logout</button>
+            <br><br>
+            <p>OR</p>
+            <br>
+            <p>Please neter your phone number</p>
+            <input type="number" placeholder="+92**********">
+            <div id="recaptcha-container"></div>
+            <button type="submit" class="button obj name col-lg-4 col-md-4 col-xs-4 col-sm-4 center-block" name="btn" value="phone">Login With phone number</button>
+            <p>Enter varification code </p>
+            <input type="number" placeholder="enter the otp">
+            <div id="recaptcha-container"></div>
+            <button type="submit" class="button obj name col-lg-4 col-md-4 col-xs-4 col-sm-4 center-block" name="btn" value="varify">Varify</button>
+            
+            <br><br>
+            <h2>OR2</h2>
+            <br>
+            <!-- <button type="submit" class="button obj name col-lg-4 col-md-4 col-xs-4 col-sm-4 center-block" name="btn" value="gmail">Login With google</button> -->
+            <div class="card-body">
+              <a class="btn btn-social btn-facebook" href="/auth/facebook" role="button"> 
+                <i class="fab fa-facebook"></i>
+                Sign In with facebook
+              </a>
+            </div>
+            <br><br>
+            <h2>OR1</h2>
+            <br>
+            <button type="submit" class="button obj name col-lg-4 col-md-4 col-xs-4 col-sm-4 center-block" name="btn" value="guest">Login As Guest</button>
+            
+          <!-- </form> -->
+    </form> 
+    
+    <script src="/js/index.js"></script>
+</body>
+</html>

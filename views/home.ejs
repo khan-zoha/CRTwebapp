@@ -1,0 +1,21 @@
+<%-include("partials/header");-%>
+<body>
+    <span class="material-icons md-48 md-16" onclick="location.replace('/setting')">person</span>
+    <img  class=questionmarks src="/images/finalquestionmarks.png" alt="questionmarks">
+    <h1 class="smallH"> Riddle Me </h1>
+
+    <form action="/home" method="POST">
+        <button class="button name col-lg-4 col-md-4 col-xs-6 col-sm-7 center-block ldrbtd" name="home" value="start" onclick="location.replace('questions')"> Start </button><br><br><br>
+        <button class="button name col-lg-4 col-md-4 col-xs-6 col-sm-7 center-block ldrbtd" name="home" value="Leaderboard"> Leaderboard </button>
+    </form>
+
+    <!-- <button class="button name col-lg-4 col-md-4 col-xs-4 col-sm-4 center-block ldrbtd" onclick="location.replace('questions')"> Start </button><br><br><br> -->
+    <!-- <button class="button name col-lg-4 col-md-4 col-xs-4 col-sm-4 center-block ldrbtd"> Leaderboard </button> -->
+    <script src="/js/index.js"></script>
+</body>
+</html>
+
+<!-- <div>Icons made by 
+    <a href="https://www.flaticon.com/authors/kiranshastry" title="Kiranshastry">Kiranshastry</a> from 
+    <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+</div> -->

@@ -1,0 +1,22 @@
+<%-include("partials/header");-%>
+<body>
+    <span class="material-icons md-48 md-16" onclick="location.replace('/settingU')">person</span>
+    <img  class=questionmarks src="/images/finalquestionmarks.png" alt="questionmarks">
+    <h1 class="urduFont" style="font-size: 67px;"> پہیلیاں </h1>
+
+    <!-- <button class="button pad4 name col-lg-4 col-md-4 col-xs-4 col-sm-4 center-block urduFont" onclick="location.replace('questionsU')"> کھیل شروع کریں </button><br><br><br>
+    <button class="button pad4 name col-lg-4 col-md-4 col-xs-4 col-sm-4 center-block urduFont"> لیڈربورڈ </button> -->
+    <!-- <br><br> -->
+
+    <form action="/homeU" method="POST">
+        <button class="button pad4 name col-lg-4 col-md-4 col-xs-6 col-sm-7 center-block urduFont" style="font-size: 26px;" name="home" value="start" onclick="location.replace('questionsU')"> کھیل شروع کریں </button><br><br><br>
+        <button class="button pad4 name col-lg-4 col-md-4 col-xs-6 col-sm-7 center-block urduFont" style="font-size: 26px;" name="home" value="Leaderboard"> لیڈربورڈ </button>
+    </form>
+    <br><br><br>
+    <script src="/js/index.js"></script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,15 @@
+<%-include("partials/header");-%>
+<body >
+    <span class="material-icons md-48 md-16" onclick="location.replace('homeU')">arrow_back</span>
+    <br><br><br><br><br><br><br><br><br>
+    <p class="obj name col-lg-9 col-md-9 col-xs-10 col-sm-10 center-block urduFont agreeU"> <%=question%> </p>
+    <br><br><br><br>
+    <form action="/questionsU" method="POST">
+        <input class="box answer name col-lg-9 col-md-9 col-xs-10 col-sm-10 center-block urduFont" type="number" name="answer" placeholder="صرف نمبر درج کریں..."  dir="rtl">
+        <br><br><br><br>
+        <button class="button next name col-lg-3 col-md-3 col-xs-5 col-sm-6 center-block urduFont" type="submit"> آگے بڑھیں </button>
+    </form>
+    <br><br><br>
+    <script src="/js/index.js"></script>
+</body>
+</html>

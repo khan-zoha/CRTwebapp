@@ -1,0 +1,37 @@
+<%-include("partials/header");-%>
+<body >
+    <span class="material-icons md-48 md-16" onclick="location.replace('home')">arrow_back</span>
+    <br><br><br><br><br><br><br><br><br>
+    <p class="obj name col-lg-9 col-md-9 col-xs-9 col-sm-9 center-block"> <%=question%> </p>
+    <br><br><br><br>
+    <form action="/binaryQs" method="POST">
+        <!-- <select class="box gender answer col-lg-9 col-md-9 col-xs-9 col-sm-9 center-block" name="answer">
+            <option class="opt", disabled selected>Select Option</option>
+            <option  value="Yes"> Yes </option>
+            <option  value="No"> No </option>
+        </select> -->
+        <!-- <input type="radio" name="answer" value="Yes">
+        <label> Yes </label><br>
+        <input type="radio" name="answer" value="No">
+        <label> No </label><br>   -->
+        <div class="box gender col-lg-9 col-md-9 col-xs-9 col-sm-9 center-block">
+            <p class="sizeP"> Please Select One of the following options</p>
+            <label class="containerB name col-lg-8 col-md-8 col-xs-8 col-sm-8 center-block">Yes
+                <input type="radio" name="answer" value="Yes">
+                <span class="checkmark"></span>
+            </label>
+            <label class="containerB name col-lg-8 col-md-8 col-xs-8 col-sm-8 center-block">No
+            <input type="radio" name="answer" value="No">
+            <span class="checkmark"></span>
+            </label>
+        </div>
+        
+        
+        <!-- <input class="box answer name col-lg-9 col-md-9 col-xs-9 col-sm-9 center-block" type="text" name="answer" placeholder="Answer..."> -->
+        <br><br><br>
+        <button class="button next name col-lg-3 col-md-3 col-xs-4 col-sm-4 center-block" type="submit"> Next </button>
+    </form>
+    <br><br><br>
+    <script src="/js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<%-include("partials/header");-%>
+<body >
+    <span class="material-icons md-48 md-16" onclick="location.replace('homeU')">arrow_back</span>
+    <br><br><br><br><br><br><br><br><br>
+    <p class="obj name col-lg-9 col-md-9 col-xs-10 col-sm-10 center-block urduFont agreeU"> <%=question%> </p>
+    <br><br><br><br>
+    <form action="/questionsU" method="POST">
+        <!-- <select class="box gender answer col-lg-9 col-md-9 col-xs-9 col-sm-9 center-block" name="answer"  dir="rtl">
+            <option class="opt", disabled selected>آپشن منتخب کریں</option>
+            <option  value="Yes"> جی ہاں </option>
+            <option  value="No"> نہیں </option>
+        </select> -->
+        <div class="box gender col-lg-9 col-md-9 col-xs-10 col-sm-10 checkbox urduFont">
+            <p class="sizeP para"> درج ذیل آپشنز میں سے ایک کا انتخاب کریں۔</p>
+
+            <div class="dheet">
+                <input style="margin-top: 30px;" class="pad radio123" type="radio" name="assistance" value="Yes">
+                <label class="sizeP pad urduFont rightAlign" style="text-align: right;padding-right: 25px;"> جی ہاں </label> 
+            </div><br>
+
+            <div class="dheet">
+                <input style="margin-top: 30px;" class="pad radio123" type="radio" name="assistance" value="No">
+                <label class="sizeP pad urduFont rightAlign" style="text-align: right;padding-right: 25px;padding-bottom: 10px;">نہیں</label> 
+            </div>
+            
+        </div>
+        <!-- <input class="box answer name col-lg-9 col-md-9 col-xs-9 col-sm-9 center-block" type="text" name="answer" placeholder="Answer..."> -->
+        <br><br><br><br>
+        <button class="button next name col-lg-3 col-md-3 col-xs-5 col-sm-6 center-block" type="submit"> آگے بڑھیں </button>
+    </form>
+    <br><br><br>
+    <script src="/js/index.js"></script>
+</body>
+</html>

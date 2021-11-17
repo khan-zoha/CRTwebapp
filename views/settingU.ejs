@@ -1,0 +1,309 @@
+<%-include("partials/header");-%>
+<body >
+    <span class="material-icons md-48 md-16" onclick="location.replace('homeU')">home</span>
+    <br><br><br><br><br>
+    <h1 class="profile urduFont"> پروفائل </h1>
+    <p class="urduFont sizeP para" style="color: rgb(53, 53, 53);"> آپ اردو اور انگریزی دونوں میں ٹائپ کرسکتے ہیں۔ </p>
+    <!-- <p class="sizeP para"> درج ذیل آپشنز میں سے ایک کا انتخاب کریں۔</p> -->
+    <form action="/settingU" method="POST">
+        <label class="formText name col-lg-4 col-md-4 col-xs-8 col-sm-8 center-block urdu urduFont"> :نام </label>
+        <input class="box pad2 name col-lg-4 col-md-4 col-xs-8 col-sm-8 center-block urdu urduFont"  type="text" placeholder="نام درج کریں" name="Name">
+        <!-- <br><br> -->
+        <label id="userExists" class="formText name col-lg-4 col-md-4 col-xs-8 col-sm-8 center-block exists"><%=errorMsg%></label>
+        <label class="formText name col-lg-4 col-md-4 col-xs-8 col-sm-8 center-block urdu urduFont">  :جنس </label>
+        <select class="box pad2 gender col-lg-4 col-md-4 col-xs-8 col-sm-8 center-block urdu urduFont" dir="rtl" name="gender">
+            <option class="opt urdu urduFont" , disabled selected> جنس کا انتخاب کریں </option>
+            <option class="urdu urduFont" value ="Female"> عورت </option>
+            <option class="urdu urduFont" value="Male"> مرد </option>
+            <option class="urdu urduFont" value="Other"> کوئی اور </option>
+        </select>
+        <br><br>
+        <label class="formText name col-lg-4 col-md-4 col-xs-8 col-sm-8 center-block urdu urduFont"> :عمر </label>
+        <select class="box pad2 gender col-lg-4 col-md-4 col-xs-8 col-sm-8 center-block urdu urduFont" dir="rtl" name="age">
+            <option class="opt urdu urduFont", disabled selected>عمر کا انتخاب کریں</option>
+            <option  value="18-25"> 25 - 18 </option>
+            <option  value="26-30"> 30 - 26 </option>
+            <option  value="31-35"> 35 - 31 </option>
+            <option  value="36-40"> 40 - 36 </option>
+            <option  value="41-45"> 45 - 41 </option>
+            <option  value="46-50"> 50 - 46 </option>
+            <option  value="51-55"> 55 - 51 </option>
+            <option  value="56-60"> 60 - 56 </option>
+            <option  value="61-65"> 65 - 61 </option>
+            <option  value="66-70"> 70 - 77 </option>
+            <option  value="71-75"> 75 - 71 </option>
+            <option  value="76-80"> 80 - 76 </option>
+            <option  value="80+"> + 80 </option>
+        </select>  
+        <br><br>
+        <label class="formText name col-lg-4 col-md-4 col-xs-8 col-sm-8 center-block urdu urduFont"> :ملک </label>
+        <select id="country" dir="rtl" name="country" class="box pad2 gender col-lg-4 col-md-4 col-xs-8 col-sm-8 center-block urduFont">
+            <option class="opt urdu urduFont", disabled selected dir="rtl"> ملک کا انتخاب کریں </option>
+            <option value="Pakistan">پاکستان</option>
+            <option value="Oman">عمان</option>
+            <option value="Bangladesh">بنگلہ دیش</option>
+            <option value="Bahrain">بحرین</option>
+            <option value="Qatar">قطر</option>
+            <option value="Saudi Arabia">سعودی عرب</option>
+            <option value="United Arab Erimates">متحدہ عرب امارات</option>
+            <option value="United Kingdom">متحدہ سلطنت یونائیٹڈ کنگڈم</option>
+            <option value="United States of America">امریکہ</option>
+            <option value="Canada">کینیڈا</option>
+            <option value="India">ہندوستان</option>
+            <option value="Afganistan">افغانستان</option>
+            <option value="Albania">البانیہ</option>
+            <option value="Algeria">الجيريا</option>
+            <option value="American Samoa">امریکی سامووا</option>
+            <option value="Andorra">انڈورا</option>
+            <option value="Angola">انگولا</option>
+            <option value="Anguilla">انگوئلا</option>
+            <option value="Antigua & Barbuda">اینٹیگوا و باربوڈا</option>
+            <option value="Argentina">ارجنٹينا</option>
+            <option value="Armenia">ارمنيا</option>
+            <option value="Aruba">اروبا</option>
+            <option value="Australia">آسٹريليا</option>
+            <option value="Austria">آسٹريا</option>
+            <option value="Azerbaijan">آذربائیجان</option>
+            <option value="Bahamas">بہاماس</option>
+            <option value="Barbados">بارباڈوس</option>
+            <option value="Belarus">بیلاروس</option>
+            <option value="Belgium">بیلجیم</option>
+            <option value="Belize">بیلیز</option>
+            <option value="Benin">بینن</option>
+            <option value="Bermuda">برمودا</option>
+            <option value="Bhutan">بھوٹان</option>
+            <option value="Bolivia">بولیویا</option>
+            <option value="Bonaire">بونیر</option>
+            <option value="Bosnia & Herzegovina">بوسنیا اور ہرزیگوینا</option>
+            <option value="Botswana">بوٹسوانا</option>
+            <option value="Brazil">برازیل</option>
+            <option value="British Indian Ocean Ter">برٹش انڈین اوشین ٹیر</option>
+            <option value="Brunei">برونائی</option>
+            <option value="Bulgaria">بلغاریہ</option>
+            <option value="Burkina Faso">برکینا فاسو</option>
+            <option value="Burundi">برونڈی</option>
+            <option value="Cambodia">کمبوڈیا</option>
+            <option value="Cameroon">کیمرون</option>
+            <option value="Canary Islands">کینری جزیرے</option>
+            <option value="Cape Verde">کیپ وردے</option>
+            <option value="Cayman Islands">جزائر کیمن</option>
+            <option value="Central African Republic">وسطی افریقی جمہوریہ</option>
+            <option value="Chad">چاڈ</option>
+            <option value="Channel Islands">چینل جزیرے</option>
+            <option value="Chile">چلی</option>
+            <option value="China">چین</option>
+            <option value="Christmas Island">کرسمس جزیرہ</option>
+            <option value="Cocos Island">کوکوس جزیرہ</option>
+            <option value="Colombia">کولمبیا</option>
+            <option value="Comoros">کوموروس</option>
+            <option value="Congo">کانگو</option>
+            <option value="Cook Islands">کوک جزیرے</option>
+            <option value="Costa Rica">کوسٹا ریکا</option>
+            <option value="Cote DIvoire">کوٹ ڈوویر</option>
+            <option value="Croatia">کروشیا</option>
+            <option value="Cuba">کیوبا</option>
+            <option value="Curaco">کوراکاؤ</option>
+            <option value="Cyprus">قبرص</option>
+            <option value="Czech Republic">جمہوریہ چیک</option>
+            <option value="Denmark">ڈنمارک</option>
+            <option value="Djibouti">جبوتی</option>
+            <option value="Dominica">ڈومینیکا</option>
+            <option value="Dominican Republic">ڈومینیکن ریپبلک</option>
+            <option value="East Timor">مشرقی تیمور</option>
+            <option value="Ecuador">ایکواڈور</option>
+            <option value="Egypt">مصر</option>
+            <option value="El Salvador">ایل سلواڈور</option>
+            <option value="Equatorial Guinea">استوائی گنی</option>
+            <option value="Eritrea">اریٹیریا</option>
+            <option value="Estonia">ایسٹونیا</option>
+            <option value="Ethiopia">ایتھوپیا</option>
+            <option value="Falkland Islands">جزائر فاک لینڈ</option>
+            <option value="Faroe Islands">جزائر فیرو</option>
+            <option value="Fiji">فجی</option>
+            <option value="Finland">فن لینڈ</option>
+            <option value="France">فرانس</option>
+            <option value="French Guiana">فرانسیسی گیانا</option>
+            <option value="French Polynesia">فرانسیسی پولینیشیا</option>
+            <option value="French Southern Ter">فرانسیسی سدرن ٹیر</option>
+            <option value="Gabon">گبون</option>
+            <option value="Gambia">گیمبیا</option>
+            <option value="Georgia">جارجیا</option>
+            <option value="Germany">جرمنی</option>
+            <option value="Ghana">گھانا</option>
+            <option value="Gibraltar">جبرالٹر</option>
+            <option value="Great Britain">برطانیہ</option>
+            <option value="Greece">یونان</option>
+            <option value="Greenland">گرین لینڈ</option>
+            <option value="Grenada">گریناڈا</option>
+            <option value="Guadeloupe">گواڈیلوپ</option>
+            <option value="Guam">گوام</option>
+            <option value="Guatemala">گوئٹے مالا</option>
+            <option value="Guinea">گنی</option>
+            <option value="Guyana">گیانا</option>
+            <option value="Haiti">ہیٹی</option>
+            <option value="Hawaii">ہوائی</option>
+            <option value="Honduras">ہونڈوراس</option>
+            <option value="Hong Kong">ہانگ کانگ</option>
+            <option value="Hungary">ہنگری</option>
+            <option value="Iceland">آئس لینڈ</option>
+            <option value="Indonesia">انڈونیشیا</option>
+            <option value="Iran">ایران</option>
+            <option value="Iraq">عراق</option>
+            <option value="Ireland">آئرلینڈ</option>
+            <option value="Isle of Man">آئل آف مین</option>
+            <option value="Italy">اٹلی</option>
+            <option value="Jamaica">جمیکا</option>
+            <option value="Japan">جاپان</option>
+            <option value="Jordan">اردن</option>
+            <option value="Kazakhstan">قازقستان</option>
+            <option value="Kenya">کینیا</option>
+            <option value="Kiribati">کرباتی</option>
+            <option value="Korea North">شمالی کوریا</option>
+            <option value="Korea Sout">جنوبی کوریا۔</option>
+            <option value="Kuwait">کویت</option>
+            <option value="Kyrgyzstan">کرغزستان</option>
+            <option value="Laos">لاؤس</option>
+            <option value="Latvia">لٹویا</option>
+            <option value="Lebanon">لبنان</option>
+            <option value="Lesotho">لیسوتھو</option>
+            <option value="Liberia">لائبیریا</option>
+            <option value="Libya">لیبیا</option>
+            <option value="Liechtenstein">لیکٹنسٹائن</option>
+            <option value="Lithuania">لیتھوانیا</option>
+            <option value="Luxembourg">لکسمبرگ</option>
+            <option value="Macau">مکاؤ</option>
+            <option value="Macedonia">مقدونیہ</option>
+            <option value="Madagascar">مڈغاسکر</option>
+            <option value="Malaysia">ملائیشیا</option>
+            <option value="Malawi">ملاوی</option>
+            <option value="Maldives">مالدیپ</option>
+            <option value="Mali">مالی</option>
+            <option value="Malta">مالٹا</option>
+            <option value="Marshall Islands">جزائر مارشل</option>
+            <option value="Martinique">مارٹنیک</option>
+            <option value="Mauritania">موریطانیہ</option>
+            <option value="Mauritius">ماریشس</option>
+            <option value="Mayotte">میوٹ</option>
+            <option value="Mexico">میکسیکو</option>
+            <option value="Midway Islands">مڈ وے جزائر</option>
+            <option value="Moldova">مالڈووا</option>
+            <option value="Monaco">موناکو</option>
+            <option value="Mongolia">منگولیا</option>
+            <option value="Montserrat">مونٹسیراٹ</option>
+            <option value="Morocco">مراکش</option>
+            <option value="Mozambique">موزمبیق</option>
+            <option value="Myanmar">میانمار</option>
+            <option value="Nambia">نمبیا</option>
+            <option value="Nauru">ناورو</option>
+            <option value="Nepal">نیپال</option>
+            <option value="Netherland Antilles">نیدرلینڈ اینٹیلز</option>
+            <option value="Netherlands">نیدرلینڈز (ہالینڈ ، یورپ)</option>
+            <option value="Nevis">نیویس</option>
+            <option value="New Caledonia">نیو کیلیڈونیا</option>
+            <option value="New Zealand">نیوزی لینڈ</option>
+            <option value="Nicaragua">نکاراگوا</option>
+            <option value="Niger">نائیجر</option>
+            <option value="Nigeria">نائیجیریا</option>
+            <option value="Niue">نیو</option>
+            <option value="Norfolk Island">جزیرہ نورفولک</option>
+            <option value="Norway">ناروے</option>
+            <option value="Palau Island">پالو جزیرہ</option>
+            <option value="Palestine">فلسطین</option>
+            <option value="Panama">پاناما</option>
+            <option value="Papua New Guinea">پاپوا نیو گنی</option>
+            <option value="Paraguay">پیراگوئے</option>
+            <option value="Peru">پیرو</option>
+            <option value="Phillipines">فلپائن</option>
+            <option value="Pitcairn Island">پٹکیرن جزیرہ</option>
+            <option value="Poland">پولینڈ</option>
+            <option value="Portugal">پرتگال</option>
+            <option value="Puerto Rico">پورٹو ریکو</option>
+            <option value="Republic of Montenegro">جمہوریہ مونٹی نیگرو</option>
+            <option value="Republic of Serbia">جمہوریہ سربیا</option>
+            <option value="Reunion">رییویعن</option> 
+            <option value="Romania">رومانیہ</option>
+            <option value="Russia">روس</option>
+            <option value="Rwanda">روانڈا</option>
+            <option value="St Barthelemy">سینٹ بارٹیلیمی</option>
+            <option value="St Eustatius">سینٹ یوسٹیشیس</option>
+            <option value="St Helena">سینٹ ہیلینا</option>
+            <option value="St Kitts-Nevis">سینٹ کٹس نیویس</option>
+            <option value="St Lucia">سینٹ لوسیا</option>
+            <option value="St Maarten">سینٹ مارٹن</option>
+            <option value="St Pierre & Miquelon">سینٹ پیئر اور میکیلون</option>
+            <option value="St Vincent & Grenadines">سینٹ ونسنٹ اور گریناڈائنز</option>
+            <option value="Saipan">سائپن</option>
+            <option value="Samoa">سموا</option>
+            <option value="Samoa American">مریکی ساموا</option>
+            <option value="San Marino">سان مارینو</option>
+            <option value="Sao Tome & Principe">ساؤ ٹومے</option>
+            <option value="Senegal">سینیگال</option>
+            <option value="Seychelles">سیشلز</option>
+            <option value="Sierra Leone">سیرا لیون</option>
+            <option value="Singapore">سنگاپور</option>
+            <option value="Slovakia">سلوواکیہ</option>
+            <option value="Slovenia">سلووینیا</option>
+            <option value="Solomon Islands">جزائر سلیمان</option>
+            <option value="Somalia">صومالیہ</option>
+            <option value="South Africa">جنوبی افریقہ</option>
+            <option value="Spain">سپین</option>
+            <option value="Sri Lanka">سری لنکا</option>
+            <option value="Sudan">سوڈان</option>
+            <option value="Suriname">سورینام</option>
+            <option value="Swaziland">سوازی لینڈ</option>
+            <option value="Sweden">سویڈن</option>
+            <option value="Switzerland">سوئٹزرلینڈ</option>
+            <option value="Syria">شام</option>
+            <option value="Tahiti">تاہیتی</option>
+            <option value="Taiwan">تائیوان</option>
+            <option value="Tajikistan">تاجکستان</option>
+            <option value="Tanzania">تنزانیہ</option>
+            <option value="Thailand">تھائی لینڈ</option>
+            <option value="Togo">ٹوگو</option>
+            <option value="Tokelau">ٹوکلاؤ</option>
+            <option value="Tonga">ٹونگو</option>
+            <option value="Trinidad & Tobago">ٹرینیڈاڈ اور ٹوباگو</option>
+            <option value="Tunisia">تیونس</option>
+            <option value="Turkey">ترکی</option>
+            <option value="Turkmenistan">ترکمانستان</option>
+            <option value="Turks & Caicos Is">ترک اور کیکوس یز</option>
+            <option value="Tuvalu">ٹوالو</option>
+            <option value="Uganda">یوگنڈا</option>
+            <option value="Ukraine">یوکرین</option>
+            <option value="Uraguay">یوراگوئے</option>
+            <option value="Uzbekistan">ازبکستان</option>
+            <option value="Vanuatu">وانواتو</option>
+            <option value="Vatican City State">ویٹیکن سٹی اسٹیٹ</option>
+            <option value="Venezuela">وینزویلا</option>
+            <option value="Vietnam">ویت نام</option>
+            <option value="Virgin Islands (Brit)">ورجن آئی لینڈ (برٹ)</option>
+            <option value="Virgin Islands (USA)">ورجن آئی لینڈ (امریکہ)</option>
+            <option value="Wake Island">ویک جزیرہ</option>
+            <option value="Wallis & Futana Is">والس اور فوٹانا یز</option>
+            <option value="Yemen">یمن</option>
+            <option value="Zaire">زائر</option>
+            <option value="Zambia">زامبیا</option>
+            <option value="Zimbabwe">زمبابوے</option>
+        </select>
+        <br><br><br>
+        <label class="formText name col-lg-4 col-md-4 col-xs-8 col-sm-8 center-block urdu urduFont"> :تعلیم </label>
+        <select class="box gender col-lg-4 col-md-4 col-xs-8 col-sm-8 center-block urdu urduFont" dir="rtl" name="education">
+            <option class="opt urdu urduFont" , disabled selected> آپشن کا انتخاب کریں </option>
+            <option  value="Preschool"> پری اسکول </option>
+            <option  value="Primary "> پرائمری اسکول (جماعت ۱۔۵) </option>
+            <option  value="Middle"> مڈل اسکول (جماعت ۶۔۸) </option>
+            <option  value="Matric"> میٹرک </option>
+            <option  value="Intermediate"> انٹرمیڈیٹ </option>
+            <option  value="Bachelor"> بیچیلور کی ڈگری </option>
+            <option  value="Master"> ماسٹر ز کی ڈگری </option>
+            <option  value="PhD"> پی ایچ ڈی </option>
+        </select>
+        <br><br><br>
+        <button style="font-size: 25px;" class="button obj pad2 submit name col-lg-3 col-md-4 col-xs-5 col-sm-5 center-block urduFont agreeU" type="submit" onclick="location.replace('homeU')"> یندراج کریں </button>
+    </form> 
+    <!-- •	I agree that the information I have provided can be displayed on the game’s leaderboard.
+         •	I agree that the information I have provided can be displayed on the game leaderboard -->
+
+    <script src="/js/index.js"></script>
+</body>
+</html>

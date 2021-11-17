@@ -1,0 +1,79 @@
+<%-include("partials/header");-%>
+<body >
+    <span class="material-icons md-48 md-16" onclick="location.replace('homeU')">home</span>
+    <br><br><br><br><br><br>
+    <h1 class="urduFont"> نتیجہ </h1>
+    <div class="obj1 name col-lg-9 col-md-9 col-xs-10 col-sm-10 center-block urduFont" dir="rtl">
+        <p class=""> <%=question1%> </p>
+        <p class="sameLine1" dir="rtl"> آپ کا جواب: </p>
+        <p class="sameLine2" dir="rtl"><%=useranswer1%></p>
+    </div>
+    <br><br><br>
+    <div class="box answer name col-lg-9 col-md-9 col-xs-10 col-sm-10 center-block urduFont" style="font-size: 25px" dir="rtl">
+        <p class="sameLine1" dir="rtl">صحیح جواب: </p>
+        <p class="sameLine2 green" dir="rtl"><%=crtanswer1%></p>
+    </div>
+    <br><br><br>
+    <div class="obj1 name col-lg-9 col-md-9 col-xs-10 col-sm-10 center-block urduFont" dir="rtl">
+        <p class=""> <%=question2%> </p>
+        <p class="sameLine1" dir="rtl"> آپ کا جواب: </p>
+        <p class="sameLine2" dir="rtl"><%=useranswer2%></p>
+    </div>
+    <br><br><br>
+    <div class="box answer name col-lg-9 col-md-9 col-xs-10 col-sm-10 center-block urduFont" style="font-size: 25px" dir="rtl">
+        <p class="sameLine1" dir="rtl">صحیح جواب: </p>
+        <p class="sameLine2 green" dir="rtl"><%=crtanswer2%></p>
+    </div>
+    <br><br><br>
+    <div class="obj1 name col-lg-9 col-md-9 col-xs-10 col-sm-10  center-block urduFont" dir="rtl">
+        <p class=""> <%=question3%> </p>
+        <p class="sameLine1" dir="rtl"> آپ کا جواب: </p>
+        <p class="sameLine2" dir="rtl"><%=useranswer3%></p>
+    </div>
+    <br><br><br>
+    <div class="box answer name col-lg-9 col-md-9 col-xs-10 col-sm-10 center-block urduFont" style="font-size: 25px" dir="rtl">
+        <p class="sameLine1" dir="rtl">صحیح جواب: </p>
+        <p class="sameLine2 green" dir="rtl"><%=crtanswer3%></p>
+    </div>
+    <br><br><br>
+    <div class="obj1 name col-lg-9 col-md-9 col-xs-10 col-sm-10  center-block urduFont" dir="rtl">
+        <p class=""> <%=question4%> </p>
+        <p class="sameLine1" dir="rtl"> آپ کا جواب: </p>
+        <p class="sameLine2" dir="rtl"><%=useranswer4%></p>
+    </div>
+    <br><br><br>
+    <div class="box answer name col-lg-9 col-md-9 col-xs-10 col-sm-10  center-block urduFont" style="font-size: 25px" dir="rtl">
+        <p class="sameLine1" dir="rtl">صحیح جواب: </p>
+        <p class="sameLine2 green" dir="rtl"><%=crtanswer4%></p>
+    </div>
+    <br><br><br>
+    <div class="obj1 name col-lg-9 col-md-9 col-xs-10 col-sm-10  center-block urduFont" dir="rtl">
+        <p class=""> <%=question5%> </p>
+        <p class="sameLine1" dir="rtl"> آپ کا جواب: </p>
+        <p class="sameLine2" dir="rtl"><%=useranswer5%></p>
+    </div>
+    <br><br><br>
+    <div class="box answer name col-lg-9 col-md-9 col-xs-10 col-sm-10  center-block urduFont" style="font-size: 25px" dir="rtl">
+        <p class="sameLine1" dir="rtl">صحیح جواب: </p>
+        <p class="sameLine2 green" dir="rtl"><%=crtanswer5%></p>
+    </div>
+    <br><br><br>
+    <div class="obj1 name col-lg-9 col-md-9 col-xs-10 col-sm-10  center-block urduFont" dir="rtl">
+        <p class=""> <%=question6%> </p>
+        <p class="sameLine1" dir="rtl"> آپ کا جواب: </p>
+        <p class="sameLine2" dir="rtl"><%=useranswer6%></p>
+    </div>
+    <br><br><br>
+    <div class="box answer name col-lg-9 col-md-9 col-xs-10 col-sm-10  center-block urduFont" style="font-size: 25px;" dir="rtl">
+        <p class="sameLine1" dir="rtl">صحیح جواب: </p>
+        <p class="sameLine2 green" dir="rtl"><%=crtanswer6%></p>
+    </div>
+    <br><br><br>
+
+    <form action="/answersU" method="POST">
+        <!-- <button class="button name col-lg-4 col-md-4 col-xs-4 col-sm-4 center-block ldrbtd" name="home" value="start" onclick="location.replace('questions')"> Start </button><br><br><br> -->
+        <button class="button pad4 name col-lg-4 col-md-4 col-xs-4 col-sm-5 center-block urduFont" name="home" value="Leaderboard"> لیڈربورڈ </button>
+    </form>
+    <br><br><br><br>
+</body>
+</html>

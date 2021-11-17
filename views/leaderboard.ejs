@@ -1,0 +1,31 @@
+<%-include("partials/header");-%>
+<body>
+    <span class="material-icons md-48 md-16" onclick="location.replace('home')">arrow_back</span>
+    <br><br><br><br><br><br>
+    <h1> Leader Board </h1>
+    <br>
+    <div class="obj1 name col-lg-9 col-md-9 col-xs-10 col-sm-10 center-block yellowbox">
+        
+        <% for(let count = 0; count < numUsers; count++ ){ %>
+            <div class="row">
+                <div class="name col-lg-1 col-md-1 col-xs-1 col-sm-1 center-block" >
+                    <label class="name col-lg-12 col-md-12 col-xs-12 col-sm-12" style="font-family: 'Josefin Sans', sans-serif;"><%= count + 1%></label>
+                </div>
+        
+                <div class="name col-lg-10 col-md-10 col-xs-10 col-sm-10 center-block box answer center-block leaderstyle">
+                    <label> <%=allUsers[count]%></label>
+                </div>
+            </div>
+            <br>
+        <% } %>
+        
+    </div>
+
+    <script src="/js/index.js"></script>
+</body>
+</html>
+
+<!-- <div>Icons made by 
+    <a href="https://www.flaticon.com/authors/kiranshastry" title="Kiranshastry">Kiranshastry</a> from 
+    <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+</div> -->
