@@ -907,6 +907,6 @@ app.post("/DLsurveyU",(req,res)=>{
     res.redirect("/answersU");
 });
 
-app.listen(3000,()=>{
+app.listen(3000, '0.0.0.0', ()=>{ // '0.0.0.0' is for running via docker only
     console.log("Server has started on port 3000");
 });
