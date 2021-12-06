@@ -14,7 +14,7 @@ const cookieParser = require('cookie-parser')
 const app = express();
 
 // allow the app to use cookieparser
-app.use(helmet());
+// app.use(helmet());
 
 // allow the app to use cookieparser
 app.use(cookieParser());
@@ -38,6 +38,16 @@ db.settings({timestampsInSnapshots:true});
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
+
+// set up a route to redirect http to https
+// app.get('*', function(req, res) {  
+//     // if(req.protocol==='https')
+//     // {
+//         res.redirect('http://' + req.headers.host + req.url);
+//     // }
+//     // Or, if you don't want to automatically detect the domain name from the request header, you can hard code it:
+//     // res.redirect('https://example.com' + req.url);
+// })
 
 let lang = "";
 let nextCount = 0;
